@@ -35,8 +35,8 @@ Select Linux or Windows.
 
 # 📂 Directory Structure
 
-LFI-Destroyer/
-LFI-Destroyer.py          
+LFI-Destruction/
+LFI-Destruction.py          
 
 modes/__init__.py ,mode3_phpinfo_race.py, mode4_upload_trigger.py, mode5_session_grabber.py           
 
