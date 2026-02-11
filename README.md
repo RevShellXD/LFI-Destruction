@@ -33,6 +33,21 @@ bash
 python3 LFI-Destroyer.py
 Select Linux or Windows.
 
+# 📂 Directory Structure
+
+LFI-Destroyer/
+├── LFI-Destroyer.py          # Main script (modes 1 & 2)
+├── modes/                    # External attack modules
+│   ├── __init__.py          # (empty)
+│   ├── mode3_phpinfo_race.py
+│   ├── mode4_upload_trigger.py
+│   └── mode5_session_grabber.py
+├── artifacts/               # All downloaded credentials/files
+└── README.md
+
+
+
+
 Choose attack mode 1.
 
 Follow the prompts to configure your LFI endpoint.
@@ -191,17 +206,6 @@ Flag	Description
 --no-color	Disable colored output
 
 
-📂 Directory Structure
-text
-LFI-Destroyer/
-├── LFI-Destroyer.py          # Main script (modes 1 & 2)
-├── modes/                    # External attack modules
-│   ├── __init__.py          # (empty)
-│   ├── mode3_phpinfo_race.py
-│   ├── mode4_upload_trigger.py
-│   └── mode5_session_grabber.py
-├── artifacts/               # All downloaded credentials/files
-└── README.md
 Modes 3, 4, and 5 are loaded dynamically from the modes/ directory.
 You can easily add new modes by dropping a Python file with a run(config, fuzzer) function.
 
