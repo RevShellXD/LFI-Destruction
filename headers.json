@@ -1,0 +1,115 @@
+{
+  "headers_db": {
+    "basic_headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Accept-Encoding": "gzip, deflate",
+      "Connection": "close",
+      "Upgrade-Insecure-Requests": "1"
+    },
+    
+    "security_bypass": {
+      "X-Forwarded-For": "192.168.1.100",
+      "X-Real-IP": "192.168.1.100",
+      "X-Originating-IP": "192.168.1.100",
+      "X-Remote-IP": "192.168.1.100",
+      "X-Remote-Addr": "192.168.1.100",
+      "X-Client-IP": "192.168.1.100",
+      "X-Host": "127.0.0.1",
+      "X-Forwarded-Host": "localhost",
+      "X-Forwarded-Server": "localhost"
+    },
+    
+    "cloudflare_bypass": {
+      "CF-Connecting-IP": "192.168.1.100",
+      "True-Client-IP": "192.168.1.100",
+      "CF-IPCountry": "US",
+      "CF-Ray": "abcdef1234567890-ORD",
+      "CF-Visitor": "{\"scheme\":\"https\"}"
+    },
+    
+    "mobile_headers": {
+      "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+      "X-Requested-With": "com.apple.mobilesafari",
+      "X-Wap-Profile": "http://wap.samsungmobile.com/uaprof/GT-I9500.xml",
+      "UA-pixels": "750x1334",
+      "UA-color": "color24",
+      "UA-OS": "iOS 17.2",
+      "UA-CPU": "ARM64"
+    },
+    
+    "api_headers": {
+      "User-Agent": "python-requests/2.31.0",
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "X-API-Key": "sk_test_abcdef1234567890",
+      "X-API-Version": "v1",
+      "X-Request-ID": "req_1234567890abcdef"
+    },
+    
+    "admin_headers": {
+      "Referer": "https://admin.example.com/dashboard",
+      "Origin": "https://admin.example.com",
+      "X-Admin-Access": "true",
+      "X-Panel-Type": "admin",
+      "X-Access-Level": "superuser"
+    },
+    
+    "waf_evasion": {
+      "X-Forwarded-Proto": "https",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Scheme": "https",
+      "X-Url-Scheme": "https",
+      "X-HTTPS": "1",
+      "Front-End-Https": "on",
+      "X-ARR-SSL": "2048|256|C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA|CN=*.example.com"
+    },
+    
+    "debug_headers": {
+      "X-Debug-Mode": "true",
+      "X-Debug-Token": "debug_123456",
+      "X-Enable-Profiler": "true",
+      "X-Request-Debug": "1",
+      "X-Trace-Id": "trace_abcdef123456"
+    },
+    
+    "legacy_headers": {
+      "User-Agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)",
+      "Accept": "*/*",
+      "Pragma": "no-cache",
+      "Cache-Control": "no-cache"
+    },
+    
+    "testing_headers": {
+      "X-Testing": "true",
+      "X-Pentest": "authorized",
+      "X-Security-Test": "authorized_scan",
+      "X-Authorized-Testing": "yes"
+    }
+  },
+  
+  "example_profiles": {
+    "mobile_user": {
+      "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+      "X-Forwarded-For": "192.168.1.100"
+    },
+    
+    "admin_user": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "X-Forwarded-For": "10.0.0.1",
+      "Referer": "https://admin.internal.com/"
+    },
+    
+    "api_client": {
+      "User-Agent": "python-requests/2.31.0",
+      "X-API-Key": "test_key_123",
+      "Accept": "application/json"
+    },
+    
+    "security_scanner": {
+      "User-Agent": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)",
+      "X-Scan-ID": "scan_123456"
+    }
+  }
+}

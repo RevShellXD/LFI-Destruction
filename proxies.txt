@@ -1,0 +1,34 @@
+# LFI SSH Fuzzer - Proxy Configuration
+# Use these proxies for routing traffic through security tools
+# Format: protocol://host:port
+
+# Local Security Tools
+http://127.0.0.1:8080          # Burp Suite Community/Professional
+http://127.0.0.1:8081          # Burp Suite Alternative Port
+http://127.0.0.1:8088          # OWASP ZAP Default Port
+http://localhost:8080          # Alternative localhost
+http://127.0.0.1:8888          # Fiddler Classic/Everywhere
+http://127.0.0.1:8866          # Caido Security Tool
+
+# SOCKS Proxies
+socks5://127.0.0.1:9050        # Tor Proxy (Default)
+socks5h://127.0.0.1:9050       # Tor Proxy with DNS resolution
+socks4://127.0.0.1:9150        # Tor Browser Bundle
+socks5://127.0.0.1:1080        # Common SOCKS Port
+socks5://127.0.0.1:1081        # Alternative SOCKS Port
+
+# Corporate/Enterprise Proxies (Examples - Replace with your own)
+# http://proxy.company.com:3128
+# http://proxy.company.com:8080
+# http://user:pass@proxy.company.com:3128  # Authenticated proxy
+# https://proxy.company.com:8443           # HTTPS Proxy
+
+# Anonymous/Public Proxies (Use with caution - reliability varies)
+# http://45.77.56.113:8080
+# http://103.47.66.154:8080
+# http://194.163.131.90:8080
+# socks5://45.138.87.238:1080
+
+# Testing Proxies
+http://testproxy:8080@127.0.0.1:8080  # Format with authentication
+https://127.0.0.1:8443                # HTTPS Proxy

