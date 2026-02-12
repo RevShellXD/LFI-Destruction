@@ -11,6 +11,12 @@ Uploaded File Trigger – Include and execute an already‑uploaded PHP shell vi
 
 PHP Session Enumeration – Download and decode session files for hijacking.
 
+
+
+LFI-OSCP.py
+IS the OSCP EXAM safe version which has 0 auto exploits. its basically a very pretty fuzzer which once it confirms the exploit it prints manual instructions on how to perform the exploit.
+
+
 ⚠️ LEGAL DISCLAIMER
 This tool is for educational purposes and authorized security testing only.
 You must have explicit written permission from the system owner before using it.
